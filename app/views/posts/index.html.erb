@@ -11,7 +11,7 @@
 <% else -%>
 	<% @posts.each do |post| -%>
 	<div class="post" id="<%= dom_id(post) %>">
-	  <%= render post %>
+	  <%= render post, :locals => {:post => post = truncate_body_html(post)} %>
 	</div>
 	<% end -%>
   <% if more_content? -%>

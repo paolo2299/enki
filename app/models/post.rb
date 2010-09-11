@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   DEFAULT_LIMIT = 15
+  TRUNCATE_MARKER = '<!-- :truncate: -->'
 
   acts_as_taggable
 
