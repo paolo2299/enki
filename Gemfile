@@ -10,12 +10,10 @@ gem 'rails', '~> 4.0.0'
 gem 'sass-rails'
 
 platforms :ruby do
-  gem 'sqlite3'
+  gem 'pg'
 end
 
 platforms :jruby do
-  # The stable version has not yet supported Rails 4
-  gem 'activerecord-jdbcsqlite3-adapter', '1.3.0.beta2'
   gem 'trinidad'
   gem 'jruby-openssl'
 end
