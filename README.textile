@@ -20,7 +20,7 @@ h2. Quick Start
   # On Debian-based systems: apt-get install libxml2-dev libxslt1-dev
   # On Mac OS X: no action required
 
-  rake secret # Paste output into place in config/initializers/secret_token.rb
+  rake secret # When running the server you should ensure that the environment variable SECRET_KEY_BASE is set to this
   rake db:migrate
   rake            # Run tests
   rails server    # Start the server
