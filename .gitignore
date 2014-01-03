@@ -7,3 +7,4 @@ config/database.yml
 *.log
 vendor/bundle
 *un~
+.env
