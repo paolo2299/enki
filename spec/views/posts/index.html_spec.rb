@@ -26,11 +26,11 @@ describe "/posts/index.html" do
   end
 
   it "should render list of posts" do
-    render :template => "/posts/index", :formats => [:html]
+    render :template => "/blog/posts/index", :formats => [:html]
   end
 
   it "should render list of posts with a tag" do
     assigns[:tag] = 'code'
-    render :template => "/posts/index", :formats => [:html]
+    render :template => "/blog/posts/index", :formats => [:html]
   end
 end

@@ -1,6 +1,6 @@
-require File.dirname(__FILE__) + '/../spec_helper'
+require File.dirname(__FILE__) + '/../../spec_helper'
 
-describe ArchivesController do
+describe Blog::ArchivesController do
   describe 'handling GET to index' do
     before(:each) do
       month = Struct.new(:date, :posts)

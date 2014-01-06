@@ -27,5 +27,10 @@ Enki::Application.configure do
   config.assets.debug = true
 
   config.eager_load = false
+
+  # Redirect trailing slashes on urls
+  config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+      r301 %r{^/(.*)/$}, '/$1'
+  end
 end
 

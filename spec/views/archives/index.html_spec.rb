@@ -25,6 +25,6 @@ describe "/archives/index.html" do
   end
 
   it 'renders posts grouped by month' do
-    render :template => "/archives/index", :formats => [:html]
+    render :template => "/blog/archives/index", :formats => [:html]
   end
 end

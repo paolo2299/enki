@@ -2,17 +2,17 @@
   <%= post_title @post -%>
 <% end -%>
 
-<%= render @post %>
+<%= render :partial => 'blog/posts/post', :object => @post %>
 
 <ol id="comments" class="commentlist">
   <% @post.approved_comments.each do |comment| -%>
     <li<%=raw cycle(' class="alt"', '') %> id="comment-<%= comment.id %>">
-      <%= render comment %>
+      <%= render :partial => 'blog/comments/comment', :object => comment %>
     </li>
   <% end -%>
 </ol>
 
-<div class="related">Looking for more? Head on over to the <%= link_to 'archives', archives_path %>.</div>
+<div class="related">Looking for more? Head on over to the <%= link_to 'archives', blog_archives_path %>.</div>
 
 <h2>Post a comment</h2>
 <% unless @comment.errors.empty? -%>

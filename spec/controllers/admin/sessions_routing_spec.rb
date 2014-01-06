@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../../spec_helper'
 
-describe PostsController do
+describe Blog::PostsController do
   describe "route" do
     it 'generates show params' do
       {:get => "/admin/session"}.should route_to(:controller => 'admin/sessions', :action => 'show')

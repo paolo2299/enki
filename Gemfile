@@ -30,6 +30,7 @@ gem 'jquery-rails'
 # gem 'ruby-debug'
 
 # Bundle the extra gems:
+gem 'rack-rewrite'
 gem 'RedCloth', '~> 4.2.9', :require => 'redcloth'
 gem 'ruby-openid', :require => 'openid'
 gem 'rack-openid', :require => 'rack/openid'

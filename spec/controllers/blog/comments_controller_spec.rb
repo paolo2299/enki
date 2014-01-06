@@ -1,6 +1,6 @@
-require File.dirname(__FILE__) + '/../spec_helper'
+require File.dirname(__FILE__) + '/../../spec_helper'
 
-describe CommentsController, 'with GET to #index' do
+describe Blog::CommentsController, 'with GET to #index' do
   include UrlHelper
 
   it 'redirects to the parent post URL' do
@@ -43,7 +43,7 @@ shared_examples_for "invalid comment" do
   end
 end
 
-describe CommentsController, 'handling commenting' do
+describe Blog::CommentsController, 'handling commenting' do
   def mock_post!
     @mock_post = mock_model(Post)
     {
@@ -104,7 +104,7 @@ describe CommentsController, 'handling commenting' do
   end
 end
 
-describe CommentsController, 'with an AJAX request to new' do
+describe Blog::CommentsController, 'with an AJAX request to new' do
   before(:each) do
     Comment.should_receive(:build_for_preview).and_return(@comment = mock_model(Comment))
 

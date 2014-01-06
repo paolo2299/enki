@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class Blog::PostsController < ApplicationController
   def index
     @tag = params[:tag]
     @posts = Post.find_recent(:tag => @tag, :include => :tags)

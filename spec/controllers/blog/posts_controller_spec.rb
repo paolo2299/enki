@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/../spec_helper'
+require File.dirname(__FILE__) + '/../../spec_helper'
 
 shared_examples_for 'successful posts list' do
   it "should be successful" do
@@ -23,7 +23,7 @@ shared_examples_for "ATOM feed" do
   end
 end
 
-describe PostsController do
+describe Blog::PostsController do
   describe 'handling GET to index'do
     before(:each) do
       @posts = [mock_model(Post)]

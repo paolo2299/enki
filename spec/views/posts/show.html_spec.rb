@@ -43,6 +43,6 @@ describe "/posts/show.html" do
   end
 
   it "should render a post" do
-    render :template => "/posts/show", :formats => [:html]
+    render :template => "/blog/posts/show", :formats => [:html]
   end
 end

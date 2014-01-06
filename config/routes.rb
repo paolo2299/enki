@@ -15,20 +15,24 @@ Enki::Application.routes.draw do
     root :to => 'dashboard#show'
   end
 
-  resources :archives, :only => [:index]
-  resources :pages, :only => [:show]
 
-  constraints :year => /\d{4}/, :month => /\d{2}/, :day => /\d{2}/ do
-    get ':year/:month/:day/:slug/comments'  => 'comments#index'
-    post ':year/:month/:day/:slug/comments' => 'comments#create'
-    get ':year/:month/:day/:slug/comments/new' => 'comments#new'
-    get ':year/:month/:day/:slug' => 'posts#show'
+  namespace :blog do
+    resources :archives, :only => [:index]
+
+    constraints :year => /\d{4}/, :month => /\d{2}/, :day => /\d{2}/ do
+      get ':year/:month/:day/:slug/comments'  => 'comments#index'
+      post ':year/:month/:day/:slug/comments' => 'comments#create'
+      get ':year/:month/:day/:slug/comments/new' => 'comments#new'
+      get ':year/:month/:day/:slug' => 'posts#show'
+    end
+
+    scope :to => 'posts#index' do
+      get 'posts.:format', :as => :formatted_posts
+      get '(:tag)', :as => :posts, :tag => /(?:[A-Za-z0-9_ \.-]|%20)+?/, :format => /html|atom/
+    end
   end
 
-  scope :to => 'posts#index' do
-    get 'posts.:format', :as => :formatted_posts
-    get '(:tag)', :as => :posts, :tag => /(?:[A-Za-z0-9_ \.-]|%20)+?/, :format => /html|atom/
-  end
+  get '/:id' => 'pages', :action => 'show'
 
-  root :to => 'posts#index'
+  root :to => 'home#index'
 end
