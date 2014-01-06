@@ -9,7 +9,7 @@ describe UrlHelper do
         :published_at => Date.new(2012,1,1),
         :slug         => 'post'
       )
-      post_path(post).should == '/2012/01/01/post'
+      post_path(post).should == '/blog/2012/01/01/post'
     end
   end
 end
