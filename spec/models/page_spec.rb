@@ -39,7 +39,7 @@ describe Page, 'validations' do
     {
       :title                => "My Page",
       :slug                 => "my-page",
-      :body                 => "body"
+      :body                 => "<p>body</p>"
     }
   end
 
@@ -58,7 +58,7 @@ end
 
 describe Page, '.build_for_preview' do
   before(:each) do
-    @page = Page.build_for_preview(:title => 'My Page', :body => "body")
+    @page = Page.build_for_preview(:title => 'My Page', :body => "<p>body</p>")
   end
 
   it 'returns a new page' do

@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    RedCloth (4.2.9)
     aaronh-chronic (0.3.9)
     actionmailer (4.0.0)
       actionpack (= 4.0.0)
@@ -165,7 +164,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  RedCloth (~> 4.2.9)
   aaronh-chronic
   coderay (~> 1.0.5)
   cucumber-rails

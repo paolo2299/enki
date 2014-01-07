@@ -243,7 +243,7 @@ end
 describe Post, '.build_for_preview' do
   before(:each) do
     @post = Post.build_for_preview(:title => 'My Post',
-                                   :body => "body",
+                                   :body => "<p>body</p>",
                                    :tag_list => "ruby",
                                    :published_at_natural => 'now')
   end
