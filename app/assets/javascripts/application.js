@@ -14,4 +14,10 @@
 //= require jquery_ujs
 //= require common
 //= require live-comment-preview
+//= require vendor/custom.modernizr
+//= require vendor/fastclick
+//= require vendor/jquery.autocomplete
+//= require vendor/jquery.cookie
+//= requrie vendor/placeholder
+//= require foundation.min
 //= require_self
