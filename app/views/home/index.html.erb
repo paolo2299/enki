@@ -12,6 +12,12 @@
         <h1>Welcome to Foundation</h1>
       </div>
     </div>
+
+        <ul class="small-block-grid-3">
+          <% page_links_for_navigation.each do |link| -%>
+            <li><%= link_to(link.name, link.url) %></li>
+          <% end -%>
+        </ul>
     
     <div class="row">
       <div class="large-12 columns">
