@@ -1,3 +1,164 @@
+body
+{
+  background: url(http://cdn.css-tricks.com/wp-content/themes/CSS-Tricks-10/images/bg.png);
+}
+
+#page_container
+{
+  position: absolute;
+  min-height: 400px;
+  width: 100%;
+}
+
+#content
+{
+  width: 80%;
+  margin: 25px auto;
+  position: relative;
+}
+
+#footer
+{
+  position: relative;
+  font-size: 8pt;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  color: gray;
+}
+
+#preview
+{
+  height: 200px;
+  overflow: auto;
+}
+
+#nav
+{
+  background: #fafafa;
+}
+
+#heading-row
+{
+  background-color: #228B22;
+}
+
+#page_heading,
+#page_heading a
+{
+  color: #CCFEEB;
+}
+
+#main
+{
+  background-color: white;
+}
+
+img
+{
+  border: solid 1px black;
+}
+
+hr
+{
+  border-top: dotted 1px black;
+  border-bottom: none;
+  height: 1px;
+}
+
+/* Links */
+.openid
+{
+  background-image: image-url("openid_icon.png");
+  padding-left: 15px;
+  background-repeat: no-repeat;
+  background-position: 0px 2px;
+}
+
+a:hover
+{
+  text-decoration: underline;
+}
+
+#footer a
+{
+  color: gray;
+  text-decoration: underline;
+}
+
+div.meta
+{
+ margin-top: 1em;
+ margin-bottom: 3em;
+}
+
+.meta ul
+{
+  list-style: none;
+  margin: 0px;
+  padding-left: 0em;
+  padding-bottom: 0.5em;
+  display: inline;
+  color: #cccccc;
+	font-size: 9pt;
+}
+.archive-month .tags
+{
+  color: #bbbbbb;
+}
+
+.meta a, .archive-month .tags a
+{
+  color: #bbbbbb;
+  border-bottom: dotted 1px #bbbbbb;
+}
+
+.meta a:hover
+{
+  text-decoration: none;
+}
+
+.meta ul li
+{
+  display: inline;
+}
+
+.meta ul li:after
+{
+  content: " | ";
+}
+
+.meta ul li:last-child:after
+{
+  content: "";
+}
+
+div.errors
+{
+  border: solid 1px red;
+  background-color: #ffcccc;
+  padding: 5px;
+  padding-left: 10px;
+  width: 485px;
+}
+
+div.errors h3
+{
+  font-size: 1.0em;
+}
+
+.fieldWithErrors
+{
+  display: inline;
+}
+
+span.error
+{
+  font-weight: bold;
+}
+
+/* Syntax highlighting */
+
 fieldset.toc
 {
   float: right;
