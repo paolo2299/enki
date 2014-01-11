@@ -68,7 +68,7 @@ body
 
 #sform
 {
-  visibility: hidden;
+  display: none;
 }
 
 #footer
