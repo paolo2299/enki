@@ -12,9 +12,63 @@ body
 
 #content
 {
-  width: 80%;
+  width: 58%;
   margin: 25px auto;
   position: relative;
+}
+
+#heading-row
+{
+  background: #2ECC40;
+}
+
+.shadowed
+{
+  position: relative;
+}
+
+.shadowed:before,
+.shadowed:after
+{
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 100%;
+  height: 100%;
+  z-index:-1;
+}
+
+.shadowed:before
+{
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+#heading-container:before
+{
+  background: #145214;
+}
+
+#heading-container:after
+{
+  background: #3D9970
+}
+
+#body-container:before
+{
+  background: #666666;
+}
+
+#body-container:after
+{
+  background: #B2B2B2;
+}
+
+#sform
+{
+  visibility: hidden;
 }
 
 #footer
@@ -33,25 +87,25 @@ body
   overflow: auto;
 }
 
-#nav
+#body-row
 {
-  background: #fafafa;
-}
-
-#heading-row
-{
-  background-color: #228B22;
+  background-color: #fafafa;
 }
 
 #page_heading,
 #page_heading a
 {
-  color: #CCFEEB;
+  color: #C2F0C2;
 }
 
 #main
 {
   background-color: white;
+}
+
+.no-max-width
+{
+  max-width: none;
 }
 
 img
@@ -67,6 +121,16 @@ hr
 }
 
 /* Links */
+a
+{
+  color: #FF9900;
+}
+
+.post-heading a
+{
+  color: black;
+}
+
 .openid
 {
   background-image: image-url("openid_icon.png");
@@ -75,9 +139,11 @@ hr
   background-position: 0px 2px;
 }
 
-a:hover
+a:hover,
+.side-nav a:hover
 {
   text-decoration: underline;
+  color: #FF9900;
 }
 
 #footer a
@@ -109,7 +175,6 @@ div.meta
 
 .meta a, .archive-month .tags a
 {
-  color: #bbbbbb;
   border-bottom: dotted 1px #bbbbbb;
 }
 
