@@ -1,5 +1,9 @@
 <% content_for(:page_title) do -%>
-  <%= page_title(@page) -%>
+  <%= page_title(page_title_parts(@page)) -%>
+<% end -%>
+
+<% content_for(:page_heading) do -%>
+  <%= page_heading(page_title_parts(@page)) -%>
 <% end -%>
 
 <%= render @page %>

@@ -1,5 +1,9 @@
 <% content_for :page_title do -%>
-  <%= posts_title(@tag) %>
+  <%= page_title(posts_title_parts(@tag)) %>
+<% end -%>
+
+<% content_for :page_heading do -%>
+  <%= page_heading(posts_title_parts(@tag)) %>
 <% end -%>
 
 <% content_for :head do -%>

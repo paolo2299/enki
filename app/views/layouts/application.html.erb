@@ -14,10 +14,10 @@
     <div id="content">
       <div id="heading-container" class="shadowed">
         <div id="heading-row" class="row no-max-width">
-          <div class="small-8 columns">
-            <h1 id="page_heading"><a href="<%= root_url %>"><%= enki_config[:title] %></a> >> Blog </h1>
+          <div class="small-11 columns">
+            <h2 id="page_heading"> <%= html_title yield(:page_heading) %> </h1>
           </div>
-          <div class="small-4 columns">
+          <div class="small-1 columns">
             <form method="get" id="sform" action="http://www.google.com/search">
               <div>
                 <h2><label for="q">Search</label></h2>
