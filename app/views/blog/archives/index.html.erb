@@ -1,5 +1,9 @@
 <% content_for(:page_title) do -%>
-  <%= archives_title %>
+  <%= page_title(archives_title_parts) %>
+<% end -%>
+
+<% content_for(:page_heading) do -%>
+  <%= page_heading(archives_title_parts) %>
 <% end -%>
 
 <h2>Archives</h2>

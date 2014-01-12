@@ -1,5 +1,9 @@
 <% content_for :page_title do -%>
-  <%= post_title @post -%>
+  <%= page_title(post_title_parts(@post)) -%>
+<% end -%>
+
+<% content_for :page_heading do -%>
+  <%= page_heading(post_title_parts(@post)) -%>
 <% end -%>
 
 <%= render :partial => 'blog/posts/post', :object => @post %>
