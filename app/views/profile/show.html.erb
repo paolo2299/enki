@@ -1,0 +1,196 @@
+<style>
+.section
+{
+  min-height: 70px;
+}
+
+#education
+{
+  background: #7FDBFF;
+}
+
+#education > .icon
+{
+  background: #0074D9;
+}
+
+#skills
+{
+  background: #F012BE;
+}
+
+#skills > .icon
+{
+  background: #B10DC9;
+  text-align: right;
+}
+
+#career
+{
+  background: #FFDC00;
+}
+
+#career > .icon
+{
+  background: #FF851B;
+}
+
+#hobbies
+{
+  background: #01FF70;
+  text-align: right;
+}
+
+#hobbies > .icon
+{
+  background: #2ECC40;
+}
+
+.icon
+{
+  height: 100%;
+  width: 70px;
+  font-size: 50px;
+  padding: 10px;
+}
+
+#profile
+{
+  margin-top: 10px;
+}
+
+.title
+{
+  font-size: 45px;
+  line-height: 70px;
+  margin: 0px 10px;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('fonts/icomoon.eot');
+  src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.woff') format('woff'),
+      url('fonts/icomoon.ttf') format('truetype'),
+      url('fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-book:before {
+  content: "\e600";
+}
+.icon-home:before {
+  content: "\e601";
+}
+.icon-laptop:before {
+  content: "\e603";
+}
+.icon-music:before {
+  content: "\e605";
+}
+.icon-profile:before {
+  content: "\e607";
+}
+.icon-history:before {
+  content: "\e60c";
+}
+.icon-calendar:before {
+  content: "\e60d";
+}
+
+</style>
+
+<div id="profile">
+  <div class="row">
+    <div class="large-12 columns">
+      <div id="education" class="section">
+        <span class="title left"> Education </span>
+        <div class="right icon icon-book">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <div id="skills" class="section">
+        <span class="title right"> Skills </span>
+        <div class="left icon icon-laptop">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <div id="career" class="section">
+        <span class="title left"> Career </span>
+        <div class="right icon icon-history">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <div id="hobbies" class="section">
+        <span class="title right"> Hobbies </span>
+        <div id="music-icon" class="left icon icon-music">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var expandedIcon = null,
+      hiddenTitle = null,
+      changing = false;
+      animateTime = 1000;
+
+  $(".section").click(function(){
+    if(changing){
+      return;
+    }
+    changing = true;
+    var section = $(this),
+        title = section.children(".title").first(),
+        icon = section.children(".icon").first();
+
+    //alert(icon.attr('class'));
+
+    if(expandedIcon && (expandedIcon[0] != icon[0])){
+      var oldTitle = $.extend({}, hiddenTitle);
+      expandedIcon.animate({
+        "width": "70px",
+        "min-height": "70px",
+        "font-size": "50px"
+      }, animateTime);
+      setTimeout(function(){
+        oldTitle.show();
+      },animateTime);
+    }
+
+    title.hide();
+    icon.animate({
+      "width": "100%", 
+      "min-height": "200px",
+      "font-size": "180px"
+    }, animateTime);
+    expandedIcon = icon;
+    hiddenTitle = title;
+    changing = false;
+  });
+</script>
