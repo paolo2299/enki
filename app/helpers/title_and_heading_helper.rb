@@ -11,6 +11,10 @@ module TitleAndHeadingHelper
     ["Blog", "Archives"]
   end
 
+  def profile_title_parts
+    ["Profile"]
+  end
+
   def page_title_parts(page)
     [page.title]
   end

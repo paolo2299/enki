@@ -115,19 +115,27 @@
 
 </style>
 
+<% content_for(:page_title) do -%>
+  <%= page_title(profile_title_parts) %>
+<% end -%>
+
+<% content_for(:page_heading) do -%>
+  <%= page_heading(profile_title_parts) %>
+<% end -%>
+
 <div id="profile">
   <div class="row">
     <div class="large-12 columns">
-      <div id="education" class="section">
-        <span class="title left"> Education </span>
-        <div class="right icon icon-book">
+        <div id="education" class="section clearfix">
+          <span class="title left"> Education </span>
+          <div class="right icon icon-book">
+          </div>
         </div>
-      </div>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <div id="skills" class="section">
+      <div id="skills" class="section clearfix">
         <span class="title right"> Skills </span>
         <div class="left icon icon-laptop">
         </div>
@@ -136,16 +144,16 @@
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <div id="career" class="section">
+      <div id="career" class="section clearfix">
         <span class="title left"> Career </span>
-        <div class="right icon icon-history">
+        <div class="right icon icon-profile">
         </div>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <div id="hobbies" class="section">
+      <div id="hobbies" class="section clearfix">
         <span class="title right"> Hobbies </span>
         <div id="music-icon" class="left icon icon-music">
         </div>
@@ -179,11 +187,11 @@
         "font-size": "50px"
       }, animateTime);
       setTimeout(function(){
-        oldTitle.show();
-      },animateTime);
+        oldTitle.slideDown();
+      },animateTime * 0.75);
     }
 
-    title.hide();
+    title.slideUp();
     icon.animate({
       "width": "100%", 
       "min-height": "200px",
