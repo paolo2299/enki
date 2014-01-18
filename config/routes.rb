@@ -15,6 +15,7 @@ Enki::Application.routes.draw do
     root :to => 'dashboard#show'
   end
 
+  get 'profile' => 'profile', :action => 'show'
 
   namespace :blog do
     resources :archives, :only => [:index]
