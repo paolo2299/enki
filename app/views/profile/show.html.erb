@@ -462,6 +462,9 @@
       "width": "100%", 
       "font-size": "180px"
     }, animateTime);
+    setTimeout(function(){
+      entry.css('height', 'auto');
+    },animateTime);
     section.data('expanded', true);
   }
   
