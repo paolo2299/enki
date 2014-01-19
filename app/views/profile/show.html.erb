@@ -48,7 +48,6 @@
 
 .icon
 {
-  height: 100%;
   width: 70px;
   font-size: 50px;
   padding: 10px;
@@ -94,9 +93,6 @@
 .icon-book:before {
   content: "\e600";
 }
-.icon-home:before {
-  content: "\e601";
-}
 .icon-laptop:before {
   content: "\e603";
 }
@@ -106,11 +102,31 @@
 .icon-profile:before {
   content: "\e607";
 }
-.icon-history:before {
-  content: "\e60c";
+
+.icon {
+  display: inline-block;
 }
-.icon-calendar:before {
-  content: "\e60d";
+
+.icon-book {
+  float: left;
+}
+
+.icon-laptop {
+  float: right;
+}
+
+.icon-profile {
+  float: left;
+}
+
+.icon-music {
+  float: right;
+}
+
+.entry {
+  font-size: 20px;
+  visibility: hidden;
+  height: 50px;
 }
 
 </style>
@@ -126,18 +142,138 @@
 <div id="profile">
   <div class="row">
     <div class="large-12 columns">
-        <div id="education" class="section clearfix">
-          <span class="title left"> Education </span>
-          <div class="right icon icon-book">
+      <div id="education" class="section clearfix">
+        <span class="title left"> Education </span>
+        <div class="right icon">
+          <div class="icon-book">
+          </div>
+          <div class="entry">
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
           </div>
         </div>
+      </div>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
       <div id="skills" class="section clearfix">
         <span class="title right"> Skills </span>
-        <div class="left icon icon-laptop">
+        <div class="left icon">
+          <div class="icon-laptop">
+          </div>
+          <div class="entry">
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+          </div>
         </div>
       </div>
     </div>
@@ -146,7 +282,67 @@
     <div class="large-12 columns">
       <div id="career" class="section clearfix">
         <span class="title left"> Career </span>
-        <div class="right icon icon-profile">
+        <div class="right icon">
+          <div class="icon-profile">
+          </div>
+          <div class="entry">
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+          </div>
         </div>
       </div>
     </div>
@@ -155,7 +351,67 @@
     <div class="large-12 columns">
       <div id="hobbies" class="section clearfix">
         <span class="title right"> Hobbies </span>
-        <div id="music-icon" class="left icon icon-music">
+        <div id="music-icon" class="left icon">
+          <div class="icon-music">
+          </div>
+          <div class="entry">
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+            Lots of text
+          </div>
         </div>
       </div>
     </div>
@@ -163,42 +419,73 @@
 </div>
 
 <script>
-  var expandedIcon = null,
-      hiddenTitle = null,
-      changing = false;
+  var locked = false,
       animateTime = 1000;
 
   $(".section").click(function(){
-    if(changing){
+    if(locked){
       return;
     }
-    changing = true;
-    var section = $(this),
-        title = section.children(".title").first(),
+    locked = true;
+    var section = $(this);
+
+    if(isExpanded(section)){
+      contractSection(section);
+    } else {
+      $('.section').each(function(i, obj) {
+        var otherSection = $(obj);
+        if((otherSection[0] != section[0]) && isExpanded(otherSection)){
+          console.log("contracting");
+          console.log(otherSection);
+          contractSection(otherSection);
+        }
+      });
+      expandSection(section);
+    }
+    locked = false;
+  });
+
+  function expandSection(section){
+    var title = section.children(".title").first(),
+        entry = section.find(".entry").first(),
         icon = section.children(".icon").first();
 
-    //alert(icon.attr('class'));
-
-    if(expandedIcon && (expandedIcon[0] != icon[0])){
-      var oldTitle = $.extend({}, hiddenTitle);
-      expandedIcon.animate({
-        "width": "70px",
-        "min-height": "70px",
-        "font-size": "50px"
-      }, animateTime);
-      setTimeout(function(){
-        oldTitle.slideDown();
-      },animateTime * 0.75);
-    }
-
     title.slideUp();
+    entry.css("visibility", "visible");
+    var entryHeight = entry.height();
+    icon.css('width', '100%').css('font-size', '180px');
+    var entryAutoHeight = entry.css('height', 'auto').height();
+    icon.css('width', '70px').css('font-size', '50px');
+    entry.height(entryHeight).animate({
+      height: entryAutoHeight}, animateTime);
     icon.animate({
       "width": "100%", 
-      "min-height": "200px",
       "font-size": "180px"
     }, animateTime);
-    expandedIcon = icon;
-    hiddenTitle = title;
-    changing = false;
-  });
+    section.data('expanded', true);
+  }
+  
+  function contractSection(section){
+    var title = section.children(".title").first(),
+        entry = section.find(".entry").first(),
+        icon = section.children(".icon").first();
+
+      entry.css("visibility", "hidden");
+
+      icon.animate({
+        "width": "70px",
+        "font-size": "50px"
+      }, animateTime);
+      entry.animate({
+        "height": "50px"
+      }, animateTime);
+      setTimeout(function(){
+        title.slideDown();
+      },animateTime * 0.75);
+    section.data('expanded', false);
+  }
+
+  function isExpanded(section){
+    return (section.data('expanded') === true);
+  }
 </script>
