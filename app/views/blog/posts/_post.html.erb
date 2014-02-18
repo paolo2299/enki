@@ -12,3 +12,7 @@
     <% end -%>
   </ul>
 </div>
+
+<% content_for :javascript do %>
+  <%= raw(post.javascripts) %>
+<% end %>

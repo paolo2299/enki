@@ -1,6 +1,7 @@
 <%= form.inputs do -%>
   <%= form.input :title -%>
   <%= form.input :body, :hint => "Use Ctrl+E to switch between preview and edit mode. <br>Insert <strong>#{h Post::TRUNCATE_MARKER}</strong> at the point where you wish to truncate the body text for display on the main blog page.".html_safe -%>
+  <%= form.input :javascripts, :hint => "You should include <script> tags as appropriate." -%>
   <%= form.input :tag_list, :as => 'string', :required => false, :hint => 'Comma separated: ruby, rails&hellip;'.html_safe -%>
 <% end -%>
 <%= form.inputs do -%>
