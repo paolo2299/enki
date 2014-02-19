@@ -12,9 +12,26 @@ body
 
 #content
 {
-  width: 58%;
-  margin: 25px auto;
+  max-width: 750px;
   position: relative;
+}
+
+// Medium screens
+@media only screen and (min-width: 40.063em) { 
+  #content
+  {
+    width: 90%;
+    margin: 15px auto;
+  }
+}
+
+//Large screens
+@media only screen and (min-width: 64.063em) { 
+  #content
+  {
+    width: 65%;
+    margin: 25px auto;
+  }
 }
 
 #heading-row
