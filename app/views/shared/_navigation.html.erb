@@ -1,0 +1,12 @@
+<ul class="side-nav">
+  <li class="heading">Pages</li>
+  <% page_links_for_navigation.each do |link| -%>
+    <li><%= link_to(link.name, link.url) %></li>
+  <% end -%>
+  <% unless category_links_for_navigation.empty? -%>
+    <li class="heading">Categories</li>
+    <% category_links_for_navigation.each do |link| -%>
+      <li><%= link_to(link.name, link.url) %></li>
+    <% end -%>
+  <% end -%>
+</ul>
