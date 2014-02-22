@@ -97,77 +97,79 @@
   </div>
 </div>
 
-<script>
-  var locked = false,
-      animateTime = 1000;
+<% content_for :javascript do %>
+  <script>
+    var locked = false,
+        animateTime = 1000;
 
-  $(".section").click(function(){
-    if(locked){
-      return;
-    }
-    locked = true;
-    var section = $(this);
+    $(".section").click(function(){
+      if(locked){
+        return;
+      }
+      locked = true;
+      var section = $(this);
 
-    if(isExpanded(section)){
-      contractSection(section);
-    } else {
-      $('.section').each(function(i, obj) {
-        var otherSection = $(obj);
-        if((otherSection[0] != section[0]) && isExpanded(otherSection)){
-          console.log("contracting");
-          console.log(otherSection);
-          contractSection(otherSection);
-        }
-      });
-      expandSection(section);
-    }
-    locked = false;
-  });
+      if(isExpanded(section)){
+        contractSection(section);
+      } else {
+        $('.section').each(function(i, obj) {
+          var otherSection = $(obj);
+          if((otherSection[0] != section[0]) && isExpanded(otherSection)){
+            console.log("contracting");
+            console.log(otherSection);
+            contractSection(otherSection);
+          }
+        });
+        expandSection(section);
+      }
+      locked = false;
+    });
 
-  function expandSection(section){
-    var title = section.children(".title").first(),
-        entry = section.find(".entry").first(),
-        icon = section.children(".icon").first();
+    function expandSection(section){
+      var title = section.children(".title").first(),
+          entry = section.find(".entry").first(),
+          icon = section.children(".icon").first();
 
-    title.slideUp();
-    entry.css("visibility", "visible");
-    var entryHeight = entry.height();
-    icon.css('width', '100%').css('font-size', '180px');
-    var entryAutoHeight = entry.css('height', 'auto').height();
-    icon.css('width', '70px').css('font-size', '50px');
-    entry.height(entryHeight).animate({
-      height: entryAutoHeight}, animateTime);
-    icon.animate({
-      "width": "100%", 
-      "font-size": "180px"
-    }, animateTime);
-    setTimeout(function(){
-      entry.css('height', 'auto');
-    },animateTime);
-    section.data('expanded', true);
-  }
-  
-  function contractSection(section){
-    var title = section.children(".title").first(),
-        entry = section.find(".entry").first(),
-        icon = section.children(".icon").first();
-
-      entry.css("visibility", "hidden");
-
+      title.slideUp();
+      entry.css("visibility", "visible");
+      var entryHeight = entry.height();
+      icon.css('width', '100%').css('font-size', '180px');
+      var entryAutoHeight = entry.css('height', 'auto').height();
+      icon.css('width', '70px').css('font-size', '50px');
+      entry.height(entryHeight).animate({
+        height: entryAutoHeight}, animateTime);
       icon.animate({
-        "width": "70px",
-        "font-size": "50px"
-      }, animateTime);
-      entry.animate({
-        "height": "50px"
+        "width": "100%", 
+        "font-size": "180px"
       }, animateTime);
       setTimeout(function(){
-        title.slideDown();
-      },animateTime * 0.75);
-    section.data('expanded', false);
-  }
+        entry.css('height', 'auto');
+      },animateTime);
+      section.data('expanded', true);
+    }
+    
+    function contractSection(section){
+      var title = section.children(".title").first(),
+          entry = section.find(".entry").first(),
+          icon = section.children(".icon").first();
 
-  function isExpanded(section){
-    return (section.data('expanded') === true);
-  }
-</script>
+        entry.css("visibility", "hidden");
+
+        icon.animate({
+          "width": "70px",
+          "font-size": "50px"
+        }, animateTime);
+        entry.animate({
+          "height": "50px"
+        }, animateTime);
+        setTimeout(function(){
+          title.slideDown();
+        },animateTime * 0.75);
+      section.data('expanded', false);
+    }
+
+    function isExpanded(section){
+      return (section.data('expanded') === true);
+    }
+  </script>
+<% end %>
