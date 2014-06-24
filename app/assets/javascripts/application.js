@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require underscore
 //= require common
 //= require live-comment-preview
 //= require vendor/custom.modernizr
@@ -20,4 +21,7 @@
 //= require vendor/jquery.cookie
 //= requrie vendor/placeholder
 //= require foundation.min
+//= require require
+//= require require_js_config
+//= require graph_search_ui
 //= require_self
