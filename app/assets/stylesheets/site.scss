@@ -16,6 +16,16 @@ body
   position: relative;
 }
 
+.left-off-canvas-menu .side-nav
+{
+  margin-left: 20px;
+}
+
+.left-off-canvas-menu .heading
+{
+  color: #dddddd;
+}
+
 // Medium screens
 @media only screen and (min-width: 40.063em) { 
   #content
@@ -49,7 +59,7 @@ body
     background: #666666;
   }
 
-  .shadowed:after
+  shadowed:after
   {
     background: #B2B2B2;
   }
